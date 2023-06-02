@@ -11,11 +11,11 @@
   display: inherit;
   justify-content: inherit;
   align-items: inherit;
-  font-size: 0.85rem;
+  font-size: 1.3rem;
   max-width: var(--max-width);
   width: 100%;
   z-index: 2;
-  font-family: var(--font-mono);
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .description a {
@@ -74,6 +74,7 @@
 
 .center {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   position: relative;
@@ -211,11 +212,15 @@
 
 @media (prefers-color-scheme: dark) {
   .vercelLogo {
-    filter: invert(1);
+    /* filter: invert(0); */
+    margin-left: 600%;
+    border-radius: 50%;
   }
 
   .logo {
-    filter: invert(1) drop-shadow(0 0 0.3rem #ffffff70);
+    /* filter: invert(0) drop-shadow(0 0 0.3rem #ffffff70); */
+    border-radius: 5%;
+    margin-top: 5%
   }
 }
 
