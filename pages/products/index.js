@@ -1,15 +1,18 @@
 import Navbar from "../../components/navbar"
 import styles from '../../styles/Home.module.css'
-import { Inter } from 'next/font/google'
+import Search from "../../components/searchComponent"
+import Title from "../../components/title"
 
-const inter = Inter({ subsets: ['latin'] })
 
 export default function Products() {
     return (
-        <main className={`${styles.main} ${inter.className}`}>
+        <main className={`${styles.main}`}>
             <div className={styles.description}>
-                <h1>Products</h1>
+                <Title>Products</Title>
                 <Navbar />
+            </div>
+            <div>
+                <Search />
             </div>
         </main>
     )

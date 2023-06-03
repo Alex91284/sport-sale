@@ -4,6 +4,7 @@ import Image from 'next/image'
 import { Inter } from 'next/font/google'
 import styles from '../styles/Home.module.css'
 import Navbar from '../components/navbar'
+import Title from '../components/title'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -19,11 +20,12 @@ export default function Home({session}) {
       </Head>
       <main className={`${styles.main} ${inter.className}`}>
         <div className={styles.description}>
-          <h1>
-            SPORT STORE PATOJITO
-          </h1>
+          <Title>SPORT STORE PATOJITO</Title>
           <Navbar />
-          <div>
+          <button onClick={() => signOut()}>
+            LOGOUT
+          </button>
+          <div className='image'>
               <img
                 src={session.user.image}
                 alt="avatar"
@@ -33,9 +35,6 @@ export default function Home({session}) {
                 priority="false"
               />
           </div>
-          <button onClick={() => signOut()}>
-            LOGOUT
-          </button>
         </div>
         <div className={styles.center}>
           <h1>Tienda Deportiva</h1>
@@ -56,8 +55,13 @@ export default function Home({session}) {
         <style jsx>
           {`
             button {
-              padding:1.2%
-            }           
+              padding: 1rem;
+              border-radius: 12px;
+              margin-left: 15%;
+            }  
+            .image {
+              margin-left: -5%
+            }         
           `}
         </style>
     </>

@@ -23,7 +23,7 @@ export default function Navbar() {
                         border-radius: 5%
                     }
                     li:hover {
-                        background-color: #7E7E7D
+                        background-color: #7E7E7D;
                     }
                 `}
             </style>
