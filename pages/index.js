@@ -1,5 +1,3 @@
-// import { useSession } from "next-auth/react"
-import { useRouter } from 'next/router'
 import { getSession, signOut } from 'next-auth/react'
 import Head from 'next/head'
 import Image from 'next/image'
@@ -47,6 +45,7 @@ export default function Home({session}) {
             alt="foto 2"
             width={380}
             height={450}
+            priority="false"
           />
         </div>
 

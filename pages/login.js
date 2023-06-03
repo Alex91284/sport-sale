@@ -14,7 +14,13 @@ export default function Login() {
         <div className="login_container">
             <p>Login</p>
             <div className="image">
-                <Image width={400} height={400} src='/logo.jpg'/>
+                <Image
+                    width={400}
+                    height={400}
+                    src='/logo.jpg'
+                    alt="logo"
+                    priority="false"
+                />
             </div>
             <button onClick={() => router.push(signIn()) }>
                 Signin with GitHub
