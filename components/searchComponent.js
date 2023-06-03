@@ -9,7 +9,7 @@ export default function Search() {
     const [search, setSearch] = useState("")
 
     const showData = async () => {
-        const res = await fetch('https://api.escuelajs.co/api/v1/products')
+        const res = await fetch('https://fakestoreapi.com/products')
         const data = await res.json()
         setProducts(data)
     }
@@ -54,7 +54,7 @@ export default function Search() {
                             <Link href={`/products/[id]`} as={`/products/${product.id}`} key={product.id}>
                                 <div className="card">
                                     <h3>{product.title}</h3>
-                                    <img width={300} height={350} src={product.category.image} alt="foto producto" />
+                                    <img width={300} height={350} src={product.image} alt="foto producto" />
                                     <p>$ {product.price}</p>                          
                                 </div>
                             </Link>
