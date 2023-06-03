@@ -4,8 +4,8 @@ import { getSession, signOut } from 'next-auth/react'
 import Head from 'next/head'
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
-import styles from '@/styles/Home.module.css'
-import Navbar from '@/components/navbar'
+import styles from '../styles/Home.module.css'
+import Navbar from '../components/navbar'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -24,7 +24,7 @@ export default function Home({session}) {
           <h1>
             SPORT STORE PATOJITO
           </h1>
-         <Navbar />
+          <Navbar />
           <div>
               <img
                 src={session.user.image}
@@ -32,7 +32,7 @@ export default function Home({session}) {
                 className={styles.vercelLogo}
                 width={45}
                 height={45}
-                priority
+                priority="false"
               />
           </div>
           <button onClick={() => signOut()}>
